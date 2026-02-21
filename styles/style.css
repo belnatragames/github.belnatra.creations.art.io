@@ -1,0 +1,412 @@
+/* Week 3: Tightened CSS for Belnatra Works */
+body {
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 15px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+    margin: 20px 0;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-menu a {
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    background-color: #333;
+}
+
+.nav-menu a[href*="about.html"] {
+    background-color: #2a2a2a;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Headings */
+h2, h3 {
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 1em;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-top: 1em;
+}
+
+/* Links */
+a {
+    color: #4dabf7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #74c0fc;
+    text-decoration: underline;
+}
+
+/* Sections */
+.content-section {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background-color: #111;
+    border-radius: 6px;
+}
+
+/* Profile Image */
+.profile-wrapper {
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin: 0 20px 10px 0;
+    border: 2px solid #444;
+}
+
+/* Artwork Image */
+.artwork-wrapper {
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.moon-necklace {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    float: right;
+    margin: 0 0 10px 20px;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+
+.artwork-caption {
+    text-align: center;
+    color: #aaa;
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+
+/* Clear floats */
+.profile-wrapper::after,
+.artwork-wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Fun Facts */
+.fun-facts {
+    background-color: #111;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+.fun-facts h4 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.fun-facts ul {
+    list-style-type: square;
+    padding-left: 1.2em;
+}
+
+.fun-facts li {
+    margin-bottom: 8px;
+}
+
+/* Highlight Text */
+.highlight {
+    font-style: italic;
+    color: #e0e0e0;
+    margin: 20px 0;
+    padding-left: 15px;
+    border-left: 3px solid #4dabf7;
+}
+
+.closing {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    color: #aaa;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.8em 0;
+}
+
+/* Home Page */
+.header-image-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.header-banner {
+    width: 90%;
+    max-width: 1000px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+.categories ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.categories li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.categories li:before {
+    content: "•";
+    color: #4dabf7;
+    padding-right: 8px;
+}
+
+.button-link {
+    background-color: #333;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button-link:hover {
+    background-color: #444;
+}
+
+/* Shop Page */
+.shop-notice {
+    background-color: #1a1a1a;
+    border-left: 4px solid #4dabf7;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.shop-item {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-item:hover {
+    transform: translateY(-3px);
+    border-color: #555;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.item-image {
+    margin: 0;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.item-details {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid #333;
+    padding-bottom: 6px;
+}
+
+.item-description {
+    color: #cccccc;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4dabf7;
+    margin: 8px 0 12px 0;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.placeholder-button {
+    background-color: #2a2a2a;
+    color: #888;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px dashed #444;
+    font-size: 0.85em;
+    cursor: not-allowed;
+    width: 100%;
+    margin-top: auto;
+}
+
+.shop-info {
+    background-color: #0f0f0f;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 30px;
+    border: 1px solid #333;
+}
+
+.shop-info h3 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.disclaimer {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+    .profile-pic,
+    .moon-necklace {
+        float: none;
+        display: block;
+        margin: 0 auto 15px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .shop-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .header-banner {
+        width: 95%;
+    }
+    
+    main {
+        padding: 10px;
+    }
+}
