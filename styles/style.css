@@ -1,0 +1,343 @@
+/* =============================== */
+/* Belnatra Works – Goblincore Theme v3 */
+/* =============================== */
+
+/* ------------------ */
+/* Color Variables */
+:root {
+    --bg: #ECE5D7;             /* Warm Creme */
+    --text-primary: #1B1B1B;   /* Deep Charcoal */
+    --accent-primary: #2E4B36; /* Dark Moss Green */
+    --accent-secondary: #88977E; /* Sage / Olive */
+    --accent-highlight: #8C6B8C; /* Dusky Purple / Mulberry */
+    --border: #2E4B36;
+    --form-bg: rgba(142, 159, 136, 0.15); /* translucent sage overlay for forms */
+}
+
+/* ------------------ */
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%2388977e' fill-opacity='0.35'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 80px 80px;
+    color: var(--text-primary);
+    font-family: 'Noka Medium', 'Noka Semibold', sans-serif; /* Typekit body */
+    margin: 0;
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* ------------------ */
+/* Header & Navigation */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: var(--accent-primary);
+    font-family: 'IvyBodoni Bold', serif; /* Typekit header font */
+    font-size: 2.4em;
+    margin-bottom: 5px;
+}
+
+header .tagline {
+    color: var(--accent-primary); /* make it visible on pattern */
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Header Image */
+.header-image-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.header-banner {
+    width: 70%;
+    max-width: 650px;
+    border: 3px solid var(--accent-primary);
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-menu a {
+    padding: 8px 18px;
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-menu a:hover {
+    background-color: var(--accent-highlight);
+    color: #fff;
+}
+
+/* ------------------ */
+/* Main Content & Boxes */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.content-section,
+.hero,
+.categories,
+.shop-item,
+.shop-info,
+.contact-form-wrapper {
+    background-color: var(--bg);
+    border: 1px solid var(--accent-primary);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2, h3 {
+    color: var(--accent-primary);
+    font-family: 'IvyBodoni Bold', serif; /* headers */
+    margin-top: 1em;
+    margin-bottom: 12px;
+}
+
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+
+/* Paragraphs & Links */
+p { margin-bottom: 12px; }
+
+a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-highlight);
+    text-decoration: underline;
+}
+
+/* ------------------ */
+/* Buttons */
+.button-link {
+    display: inline-block;
+    background-color: var(--accent-highlight);
+    color: #fff;
+    padding: 10px 22px;
+    margin: 5px 5px 5px 0;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: all 0.25s ease;
+}
+
+.button-link:hover {
+    background-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+/* ------------------ */
+/* Profile & Artwork Images Wrapping */
+.profile-wrapper,
+.artwork-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.profile-text,
+.artwork-text {
+    flex: 1 1 300px;
+}
+
+.profile-pic,
+.moon-necklace {
+    width: 200px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid var(--accent-primary);
+    object-fit: cover;
+}
+
+/* ------------------ */
+/* Fun Facts */
+.fun-facts {
+    background-color: var(--bg);
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid var(--accent-primary);
+}
+
+/* Highlighted Text */
+.highlight {
+    font-style: italic;
+    color: var(--accent-secondary);
+    padding-left: 12px;
+    border-left: 3px solid var(--accent-highlight);
+    margin: 15px 0;
+}
+
+/* ------------------ */
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid var(--accent-primary);
+    color: var(--text-primary);
+    font-size: 0.9em;
+}
+
+/* ------------------ */
+/* Shop Grid */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.shop-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-highlight);
+}
+
+/* ------------------ */
+/* Contact Form */
+.contact-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    padding: 25px;
+    background-color: var(--box-bg); /* opaque cream box */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form-wrapper label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--primary-accent);
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid var(--secondary-accent);
+    background-color: #fff;
+    color: var(--text-color);
+    font-family: 'Noka Medium', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--highlight);
+    box-shadow: 0 0 8px rgba(140,107,140,0.5);
+}
+
+.contact-form-wrapper textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form-wrapper button {
+    background-color: var(--highlight);
+    color: var(--bg-color);
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form-wrapper button:hover {
+    background-color: var(--primary-accent);
+    transform: translateY(-2px);
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea,
+.contact-form-wrapper select {
+    padding: 10px;
+    border: 1px solid var(--accent-primary);
+    border-radius: 6px;
+    font-family: 'Noka Medium', 'Noka Semibold', sans-serif;
+    background-color: #fff;
+    color: var(--text-primary);
+}
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus,
+.contact-form-wrapper select:focus {
+    border-color: var(--accent-highlight);
+    outline: none;
+}
+
+/* Submit Button */
+.contact-form-wrapper button {
+    background-color: var(--accent-highlight);
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.contact-form-wrapper button:hover {
+    background-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+/* ------------------ */
+/* Mobile */
+@media (max-width: 768px) {
+    body { font-size: 15px; }
+    .profile-pic,
+    .moon-necklace { max-width: 100%; margin: 0 auto 12px; }
+    .nav-menu { flex-direction: column; gap: 8px; align-items: center; }
+    .shop-grid { grid-template-columns: 1fr; gap: 15px; }
+    .header-banner { width: 90%; }
+    main { padding: 10px; }
+}
