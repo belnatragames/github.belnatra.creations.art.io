@@ -297,27 +297,24 @@ h3 { font-size: 1.4em; }
 }
 
 /* ------------------ */
-/* Image Container */
+/* Shop Grid Images Fix */
 
 .item-image {
-    width: 100%;
-    max-width: 260px;   /* match grid column width */
-    height: 200px;      /* fixed height like placeholders */
+    width: 100%;         /* fill the card width */
+    height: auto;        /* allow height to scale with width */
+    max-width: 260px;    /* optional, prevents huge images on wide screens */
     margin: 0 auto var(--space-sm);
-    overflow: hidden;   /* prevents overflow if image is larger */
     border-radius: 12px;
+    overflow: hidden;
 }
 
-/* ------------------ */
-/* Product Images */
-
 .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;           /* crops instead of stretching */
+    width: 100%;         /* always fill container */
+    height: auto;        /* keep aspect ratio */
+    object-fit: cover;   /* crop if necessary */
     display: block;
     border-radius: 12px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 /* Individual product border colors */
