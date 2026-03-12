@@ -1,83 +1,98 @@
 /* =============================== */
-/* Belnatra Works v4 */
-/* Improvements based on instructor feedback */
+/* Belnatra Works v5 */
+/* Cleaned + consistency improvements */
 /* =============================== */
 
+
 /* ------------------ */
-/* Color Variables */
+/* Color + Spacing Variables */
+
 :root {
-    --bg: #ECE5D7;             /* Warm Creme */
-    --text-primary: #1B1B1B;   /* Deep Charcoal */
-    --accent-primary: #2E4B36; /* Dark Moss Green */
-    --accent-secondary: #88977E; /* Sage */
-    --accent-highlight: #8C6B8C; /* Dusky Purple */
+
+    --bg: #ECE5D7;
+    --text-primary: #1B1B1B;
+
+    --accent-primary: #2E4B36;
+    --accent-secondary: #88977E;
+    --accent-highlight: #8C6B8C;
+
     --border: #2E4B36;
 
-    /* NEW: spacing system so spacing stays consistent across pages */
+    /* spacing system */
     --space-sm: 10px;
     --space-md: 20px;
     --space-lg: 30px;
 }
 
+
 /* ------------------ */
 /* Global Styles */
+
 * {
     box-sizing: border-box;
 }
 
 body {
+
     background-color: var(--bg);
 
-    /* decorative repeating pattern */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%2388977e' fill-opacity='0.35'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+
     background-repeat: repeat;
     background-size: 80px 80px;
 
     color: var(--text-primary);
 
-    /* UPDATED: Added fallback fonts for accessibility */
     font-family: "Noka", Arial, Helvetica, sans-serif;
 
     margin: 0;
     padding: var(--space-sm);
 
-    line-height: 1.6; /* improved readability */
+    line-height: 1.6;
     font-size: 16px;
 }
 
+
 /* ------------------ */
-/* Header & Navigation */
+/* Links */
 
-header {
-    text-align: center;
-
-    /* UPDATED: consistent spacing variable */
-    margin-bottom: var(--space-lg);
-}
-/* Make all links bold across the site */
 a {
-    font-weight: 600;  /* Bold for all links */
+    font-weight: 600;
+    color: var(--accent-primary);
+    text-decoration: none;
 }
 
 a:hover {
     color: var(--accent-highlight);
     text-decoration: underline;
 }
+
+
+/* ------------------ */
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
 header h1 {
+
     color: var(--accent-primary);
 
-    /* UPDATED: fallback fonts added */
-    font-family: "Ivy Bodoni", Georgia, "Times New Roman", serif;
+    font-family: "Ivy Bodoni", Georgia, serif;
 
     font-size: 2.4em;
+
     margin-bottom: var(--space-sm);
 }
 
-header .tagline {
+.tagline {
     color: var(--accent-primary);
     font-size: 1.1em;
     margin-bottom: var(--space-md);
 }
+
 
 /* Header Image */
 
@@ -89,63 +104,66 @@ header .tagline {
 .header-banner {
     width: 70%;
     max-width: 650px;
+
     border: 3px solid var(--accent-primary);
     border-radius: 12px;
+
     display: block;
     margin: 0 auto;
 }
+
 
 /* ------------------ */
 /* Navigation */
 
 .nav-menu {
+
     list-style: none;
     padding: 0;
 
-    /* UPDATED: consistent spacing system */
-    margin: 0 auto var(--space-md) auto;
+    margin: 0 auto var(--space-md);
 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     gap: var(--space-sm);
 }
 
 .nav-menu a {
+
     padding: 8px 18px;
 
     background-color: var(--accent-secondary);
 
     color: var(--text-primary);
 
-    text-decoration: none;
-
     border: 1px solid var(--border);
     border-radius: 6px;
-
-    font-weight: 600;
 
     transition: all 0.2s ease;
 }
 
-/* UPDATED: hover contrast maintained */
 .nav-menu a:hover {
+
     background-color: var(--accent-highlight);
     color: #ffffff;
 }
 
+
 /* ------------------ */
-/* Main Content */
+/* Main Layout */
 
 main {
+
     max-width: 900px;
     margin: 0 auto;
 
-    /* UPDATED: spacing system */
     padding: var(--space-md);
 }
 
-/* Shared content boxes (keeps layout consistent across pages) */
+
+/* Shared content boxes */
 
 .content-section,
 .hero,
@@ -160,7 +178,6 @@ main {
 
     border-radius: 12px;
 
-    /* UPDATED: consistent padding */
     padding: var(--space-md);
 
     margin-bottom: var(--space-md);
@@ -168,14 +185,15 @@ main {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+
 /* ------------------ */
 /* Headings */
 
-h2, h3 {
+h2,
+h3 {
 
     color: var(--accent-primary);
 
-    /* UPDATED: fallback fonts */
     font-family: "Ivy Bodoni", Georgia, serif;
 
     margin-top: var(--space-md);
@@ -185,18 +203,6 @@ h2, h3 {
 h2 { font-size: 1.8em; }
 h3 { font-size: 1.4em; }
 
-/* ------------------ */
-/* Links */
-
-a {
-    color: var(--accent-primary);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--accent-highlight);
-    text-decoration: underline;
-}
 
 /* ------------------ */
 /* Buttons */
@@ -205,10 +211,7 @@ a:hover {
 
     display: inline-block;
 
-    /* Sage background */
     background-color: var(--accent-secondary);
-
-    /* Charcoal text */
     color: var(--text-primary);
 
     padding: 10px 22px;
@@ -217,16 +220,10 @@ a:hover {
 
     border-radius: 10px;
 
-    font-weight: 600;
-
-    text-decoration: none;
-
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 
     transition: all 0.25s ease;
 }
-
-/* UPDATED: hover switches to purple for interaction signal */
 
 .button-link:hover {
 
@@ -236,6 +233,7 @@ a:hover {
     transform: translateY(-2px);
 }
 
+
 /* ------------------ */
 /* Image Layout */
 
@@ -243,10 +241,9 @@ a:hover {
 .artwork-wrapper {
 
     display: flex;
+    flex-wrap: wrap;
 
     gap: var(--space-md);
-
-    flex-wrap: wrap;
 
     align-items: flex-start;
 }
@@ -260,7 +257,6 @@ a:hover {
 .moon-necklace {
 
     width: 200px;
-
     max-width: 40%;
 
     height: auto;
@@ -272,23 +268,6 @@ a:hover {
     object-fit: cover;
 }
 
-/* ------------------ */
-/* Footer */
-
-footer {
-
-    text-align: center;
-
-    margin-top: var(--space-lg);
-
-    padding-top: var(--space-md);
-
-    border-top: 1px solid var(--accent-primary);
-
-    color: var(--text-primary);
-
-    font-size: 0.9em;
-}
 
 /* ------------------ */
 /* Shop Grid */
@@ -303,29 +282,50 @@ footer {
 }
 
 .shop-item:hover {
+
     transform: translateY(-3px);
+
     border-color: var(--accent-highlight);
 }
+
 
 /* ------------------ */
 /* Contact Form */
 
 .contact-form-wrapper {
 
-    max-width: 600px;
-
-    margin: 0 auto var(--space-lg) auto;
-
-    padding: var(--space-md);
-
-    border-radius: 12px;
-
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    max-width: 900px;
+    margin: 0 auto var(--space-lg);
 
     display: flex;
     flex-direction: column;
 
-    gap: var(--space-sm);
+    gap: var(--space-md);
+}
+
+/* Form layout */
+
+.contact-form-wrapper form {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-md);
+}
+
+/* Each input group */
+
+.contact-form-wrapper form div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+
+.contact-form-wrapper label {
+
+    font-weight: 600;
+    margin-bottom: 4px;
 }
 
 /* Inputs */
@@ -334,39 +334,47 @@ footer {
 .contact-form-wrapper textarea,
 .contact-form-wrapper select {
 
+    width: 100%;   /* this is the key fix */
+
     padding: 10px;
 
-    border: 1px solid var(--accent-primary);
-
     border-radius: 6px;
+    border: 1px solid var(--accent-primary);
 
     font-family: "Noka", Arial, sans-serif;
 
     background-color: #ffffff;
-
     color: var(--text-primary);
 }
 
-/* Focus states for accessibility */
+/* Message box */
+
+.contact-form-wrapper textarea {
+
+    min-height: 180px;
+    resize: vertical;
+}
+
+/* Focus state */
 
 .contact-form-wrapper input:focus,
 .contact-form-wrapper textarea:focus,
 .contact-form-wrapper select:focus {
 
     border-color: var(--accent-highlight);
-
     outline: none;
 }
 
-/* Submit Button */
+/* Submit button */
 
 .contact-form-wrapper button {
 
-    background-color: var(--accent-secondary);
+    width: 100%;
 
+    background-color: var(--accent-secondary);
     color: var(--text-primary);
 
-    padding: 10px 18px;
+    padding: 12px;
 
     border: none;
 
@@ -387,6 +395,22 @@ footer {
 
     transform: translateY(-2px);
 }
+/* ------------------ */
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    margin-top: var(--space-lg);
+
+    padding-top: var(--space-md);
+
+    border-top: 1px solid var(--accent-primary);
+
+    font-size: 0.9em;
+}
+
 
 /* ------------------ */
 /* Mobile */
@@ -397,24 +421,28 @@ footer {
         font-size: 15px;
     }
 
-    .profile-pic,
-    .moon-necklace {
-        max-width: 100%;
-        margin: 0 auto var(--space-sm);
-    }
-
     .nav-menu {
+
         flex-direction: column;
-        gap: var(--space-sm);
+
         align-items: center;
     }
 
+    .profile-pic,
+    .moon-necklace {
+
+        max-width: 100%;
+
+        margin: 0 auto var(--space-sm);
+    }
+
     .shop-grid {
+
         grid-template-columns: 1fr;
-        gap: var(--space-sm);
     }
 
     .header-banner {
+
         width: 90%;
     }
 
